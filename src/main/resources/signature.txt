@@ -1,0 +1,5 @@
+host: <host>
+date: <date>
+(request-target): post /flex/v2/sessions
+digest: <digest>
+v-c-merchant-id: <merchantId>

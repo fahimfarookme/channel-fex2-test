@@ -1,0 +1,21 @@
+{
+	"fields": {
+		"paymentInformation": {
+			"card": {
+				"number": {},
+				"securityCode": {
+					"required": false
+				},
+				"expirationMonth": {
+					"required": false
+				},
+				"expirationYear": {
+					"required": false
+				},
+				"type": {
+					"required": false
+				}
+			}
+		}
+	}
+}

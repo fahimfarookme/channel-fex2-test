@@ -1,0 +1,1 @@
+keyid="<keyid>", algorithm="<algorithm>", headers="host date (request-target) digest v-c-merchant-id", signature="<signature>"
