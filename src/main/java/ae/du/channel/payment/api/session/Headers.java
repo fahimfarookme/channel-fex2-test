@@ -29,8 +29,6 @@ public class Headers {
 		headers.put("v-c-merchant-id", this.config.getMerchant().getId());
 		headers.put("Accept", "application/jwt");
 		headers.put("Content-Type", "application/json;charset=utf-8");
-//		headers.put("Date", "Sat, 29 Jan 2022 19:59:07 GMT");
-		System.out.println(Util.newDate());
 		headers.put("Date", Util.newDate());
 		headers.put("Host", this.config.getMerchant().getRequestHost());
 		headers.put("Connection", "keep-alive");

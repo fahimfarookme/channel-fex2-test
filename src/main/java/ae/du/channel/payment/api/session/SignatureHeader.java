@@ -40,7 +40,7 @@ public class SignatureHeader {
         st.add("algorithm", this.config.getMerchant().getAlgorithm());
         st.add("signature", signedSignature());
 
-        return st.render();
+        return st.render().replaceAll("\r\n", "\n");
     }
 
     private String signedSignature() {
@@ -50,8 +50,6 @@ public class SignatureHeader {
     private String plainSignature() {
         final ST st = new ST(Util.asString(this.signatureFile));
         st.add("host", this.config.getMerchant().getRequestHost());
-//        st.add("date", "Sat, 29 Jan 2022 19:59:07 GMT");
-        System.out.println(Util.newDate());
         st.add("date", Util.newDate());
         st.add("digest", this.digest.generate());
         st.add("merchantId", this.config.getMerchant().getId());

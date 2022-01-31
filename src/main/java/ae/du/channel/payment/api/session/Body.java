@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 
 import ae.du.channel.payment.Util;
 
+/**
+ * Hints
+ * https://stackoverflow.com/questions/3776923/how-can-i-normalize-the-eol-character-in-java
+ * https://stackoverflow.com/questions/23829553/different-hash-value-created-on-windows-linux-and-mac-for-same-image
+ */
 @Component
 public class Body {
 
@@ -15,6 +20,6 @@ public class Body {
 
 	public String generate() {
 		final String body = Util.asString(this.sessionBodyFile);
-		return body;
+		return body.replaceAll("\r\n", "\n");
 	}
 }
